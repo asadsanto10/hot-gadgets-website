@@ -16,10 +16,21 @@ body {
 button {
   outline: none !important; }
 
+.btn {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none; }
+  .btn:focus {
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
 /*head section style*/
 #head {
   background: url(../img/banner-products/bg.png) no-repeat;
-  background-size: cover; }
+  background-size: 100% 100%; }
   #head nav .logo-size img {
     width: 50%; }
   #head nav ul li {
@@ -28,15 +39,19 @@ button {
       font-weight: 700;
       font-size: 15px; }
   #head .custom-carousel {
-    padding: 0 0 25em; }
+    padding: 0 0 15em; }
     #head .custom-carousel .custom-indicators li {
       background-color: #00000052;
-      border-radius: 50%;
+      border-radius: 5px;
       width: 20px;
-      height: 13px; }
+      height: 10px;
+      -webkit-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      border: none; }
     #head .custom-carousel .custom-indicators .active {
-      width: 35px;
-      height: 13px; }
+      width: 50px;
+      border-radius: 15px;
+      background: linear-gradient(308deg, #ed4b72 0%, #ff1973 100%); }
   #head .content h2 {
     font-size: 30px;
     font-weight: 700;
@@ -50,7 +65,8 @@ button {
     font-size: 15px;
     font-weight: 700;
     text-transform: capitalize;
-    position: relative; }
+    position: relative;
+    background: linear-gradient(308deg, #ed4b72 0%, #ff1973 100%); }
     #head .content a span {
       position: absolute;
       right: 12px;
@@ -60,6 +76,20 @@ button {
       right: 05px; }
 
 /*========responsive===================*/
+@media only screen and (max-width: 768px) {
+  #head {
+    background: none; }
+    #head .custom-carousel {
+      padding: 0 0 5em; }
+    #head .content {
+      text-align: center; }
+      #head .content h2 {
+        text-align: center;
+        margin-top: 15px; }
+      #head .content p {
+        text-align: justify;
+        padding: 0 0 15px 0; } }
+
 @media only screen and (max-width: 992px) {
   nav ul {
     margin-top: 15px; } }
